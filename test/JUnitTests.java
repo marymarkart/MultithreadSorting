@@ -354,7 +354,7 @@ public class JUnitTests {
     }
 
     @Test
-    public void testPartition(){
+    public void testMerge(){
         List<Integer> input = new ArrayList<>() {
             {
                 add(78);
