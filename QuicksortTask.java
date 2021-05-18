@@ -44,9 +44,10 @@ public class QuicksortTask<E extends Comparable<E>> extends RecursiveAction {
             QuicksortTask rightTask = new QuicksortTask(a, pivotIndex + 1, high);
 
             leftTask.fork();
-            rightTask.compute();
+            rightTask.fork();
 
             leftTask.join();
+            rightTask.join();
         }
     }
 
