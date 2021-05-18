@@ -234,7 +234,7 @@ public class JUnitTests {
             }
         };
         MergesortTask task = new MergesortTask(input.subList(0,input.size()));
-        input = (ArrayList<Integer>) pool.invoke(task);
+        pool.invoke(task);
         String result = "";
         for (int i = 0; i < input.size(); i++){
             result = result + input.get(i) + ":";
